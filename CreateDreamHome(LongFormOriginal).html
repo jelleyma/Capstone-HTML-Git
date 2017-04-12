@@ -1,0 +1,663 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+<title>House Valuer</title>
+<link rel="stylesheet" href="house.css">
+<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+<style>
+.optgroup{
+border: 1px solid black;
+padding: 2em;
+display: block;
+vertical-align: middle;
+margin-top: 2em;
+}
+body{
+width: 80%;
+margin-left: 10%;
+margin-right: 10%;
+}
+</style>
+
+<script type="text/javascript">
+$(document).ready(function(){
+$("#basement").hide();
+$(".suboptgroup").hide();
+$("#garage").hide();
+$(".opt").hide();
+$(".porch").hide();
+$("#fireplace").hide();
+$('input[type="checkbox"]').click(function(){
+if($(this).attr("value")=="building"){
+if($("#building").is(":visible")){$("#building").hide();}
+else{$("#building").show();}
+}
+if($(this).attr("value")=="interior"){
+if($("#interior").is(":visible")){$("#interior").hide();}
+else{$("#interior").show();}
+}
+if($(this).attr("value")=="exterior"){
+if($("#exterior").is(":visible")){$("#exterior").hide();}
+else{$("#exterior").show();}
+}
+if($(this).attr("value")=="garage"){
+if($("#garage").contents().is(":visible")){$("#garage").contents().hide();}
+else{$("#garage").contents().show();}
+}
+if($(this).attr("value")=="basement"){
+if($("#basement").is(":visible")){$("#basement").hide();}
+else{$("#basement").show();}
+}
+if($(this).attr("value")=="condition"){
+if($("#condition").is(":visible")){$("#condition").hide();}
+else{$("#condition").show();}
+}
+if($(this).attr("value")=="pool"){
+if($("#pool").is(":visible")){$("#pool").hide();}
+else{$("#pool").show();}
+}
+if($(this).attr("value")=="deck"){
+if($("#deck").is(":visible")){$("#deck").hide();}
+else{$("#deck").show();}
+}
+if($(this).attr("value")=="porch"){
+if($(".porch").is(":visible")){$(".porch").hide();}
+else{$(".porch").show();}
+}
+if($(this).attr("value")=="fence"){
+if($("#fence").is(":visible")){$("#fence").hide();}
+else{$("#fence").show();}
+}
+if($(this).attr("value")=="masonryveneer"){
+if($("#masonryveneer").is(":visible")){$("#masonryveneer").hide();}
+else{$("#masonryveneer").show();}
+}
+if($(this).attr("value")=="fireplace"){
+if($("#fireplace").is(":visible")){$("#fireplace").hide();}
+else{$("#fireplace").show();}
+}
+if($(this).attr("value")=="kitchen"){
+if($("#kitchen").is(":visible")){$("#kitchen").hide();}
+else{$("#kitchen").show();}
+}
+if($(this).attr("value")=="bath"){
+if($("#bath").is(":visible")){$("#bath").hide();}
+else{$("#bath").show();}
+}
+if($(this).attr("value")=="airconditioning"){
+if($("#airconditioning").is(":visible")){$("#airconditioning").hide();}
+else{$("#airconditioning").show();}
+}
+if($(this).attr("value")=="heating"){
+if($("#heating").is(":visible")){$("#heating").hide();}
+else{$("#heating").show();}
+}
+if($(this).attr("value")=="roof"){
+if($("#roof").is(":visible")){$("#roof").hide();}
+else{$("#roof").show();}
+}
+if($(this).attr("value")=="zone"){
+if($("#zone").is(":visible")){$("#zone").hide();}
+else{$("#zone").show();}
+}
+if($(this).attr("value")=="alley"){
+if($("#alley").is(":visible")){$("#alley").hide();}
+else{$("#alley").show();}
+}
+if($(this).attr("value")=="utilities"){
+if($("#utilities").is(":visible")){$("#utilities").hide();}
+else{$("#utilities").show();}
+}
+if($(this).attr("value")=="neighborhood"){
+if($("#neighborhood").is(":visible")){$("#neighborhood").hide();}
+else{$("#neighborhood").show();}
+}
+if($(this).attr("value")=="lot"){
+if($("#lot").is(":visible")){$("#lot").hide();}
+else{$("#lot").show();}
+}
+if($(this).attr("value")=="exteriorfeature"){
+if($("#exteriorfeature").is(":visible")){$("#exteriorfeature").hide();}
+else{$("#exteriorfeature").show();}
+}
+if($(this).attr("value")=="base"){
+if($("#base").is(":visible")){$("#base").hide();}
+else{$("#base").show();}
+}
+if($(this).attr("value")=="driveway"){
+if($("#driveway").is(":visible")){$("#driveway").hide();}
+else{$("#driveway").show();}
+}
+if($(this).attr("value")=="street"){
+if($("#street").is(":visible")){$("#street").hide();}
+else{$("#street").show();}
+}
+});
+});
+</script>
+</head>
+
+
+<body>
+<h1>House Form</h1>
+<form>
+
+<div class ="optgroup" id="buildingcontainer">
+<h2>Building Information<input type="checkbox" value="building"></h2>
+<div class ="suboptgroup" id="building">
+<h3>Building Type</h3>
+<select name="buildingtype" id="buildingtype">
+<option value="1Fam">Single-family Detached</option>
+<option value="2FmCon">Two-family Conversion; originally built as one-family dwelling</option>
+<option value="Duplx">Duplex</option>
+<option value="TwnhsE">Townhouse End Unit</option>
+<option value="TwnhsI">Townhouse Inside Unit</option>
+</select>
+<h3>Home Type</h3>
+<select name="housestyle" >
+<option value="1Story">One story</option>
+<option value="1.5Fin">One and one-half story: 2nd level finished</option>
+<option value="1.5Unf">One and one-half story: 2nd level unfinished</option>
+<option value="2Story">Two story</option>
+<option value="2.5Fin">Two and one-half story: 2nd level finished</option>
+<option value="2.5Unf">Two and one-half story: 2nd level unfinished</option>
+<option value="SFoyer">Split Foyer</option>
+<option value="SLvl">Split Level</option>
+</select>
+<h3>Quality of Building</h3>
+<select name="overallqual">
+<option value="NA" selected>No Preference</option>
+<option value="10">Very Excellent</option>
+<option value="9">Excellent</option>
+<option value="8">Very Good</option>
+<option value="7">Good</option>
+<option value="6">Above Average</option>
+<option value="5">Average</option>
+<option value="4">Below Average</option>
+<option value="3">Fair</option>
+<option value="2">Poor</option>
+<option value="1">Very Poor</option>
+</select>
+<h3>Condition of Building</h3>
+<select name="overallcond">
+<option value="NA" selected>No Preference</option>
+<option value="10">Very Excellent</option>
+<option value="9">Excellent</option>
+<option value="8">Very Good</option>
+<option value="7">Good</option>
+<option value="6">Above Average</option>
+<option value="5">Average</option>
+<option value="4">Below Average</option>
+<option value="3">Fair</option>
+<option value="2">Poor</option>
+<option value="1">Very Poor</option>
+</select>
+</div>
+</div>
+
+
+<div class ="optgroup" id="interiorcontainer">
+<h2>Interior Preference <input type="checkbox" value="interior"></h2>
+<div class ="suboptgroup" id="interior">
+<h3>Heating <input type="checkbox" value="heating"></h3>
+<select name="heating" id = "heating" class = "opt">
+<option value="NA" selected>No Preference</option>
+<option value="Floor">Floor Furnace</option>
+<option value="GasA">Gas forced warm air furnace</option>
+<option value="GasW">Gas hot water or steam heat</option>
+<option value="Grav">Gravity furnace</option>
+<option value="OthW">Hot water or steam heat other than gas</option>
+<option value="Wall">Wall furnace</option>
+</select>
+<h3>Air Conditioning <input type="checkbox" value="airconditioning"></h3>
+<select name="airconditioning" id = "airconditioning" class = "opt">
+<option value="NA" selected>No Preference</option>
+<option value="SBrkr">Standard Circuit Breakers & Romex</option>
+<option value="FuseA">Fuse Box over 60 AMP and all Romex wiring (Average)</option>
+<option value="FuseF">60 AMP Fuse Box and mostly Romex wiring (Fair)</option>
+<option value="FuseP">60 AMP Fuse Box and mostly knob & tube wiring (poor)</option>
+<option value="Mix">Mixed</option>
+</select>
+<h3>Kitchens <input type="checkbox" value="kitchen"></h3>
+<select name="kitchen" id = "kitchen" class = "opt">
+<option value="NA" selected>No Preference</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+</select>
+<h3>Baths <input type="checkbox" value="bath"></h3>
+<select name="bath" id="bath" class = "opt">
+<option value="NA" selected>No Preference</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+</select>
+<h3>Fireplaces <input type="checkbox" value="fireplace"> </h3>
+<div id = "fireplace" class = "suboptgroup">
+<select name="fireplace">
+<option value="NA" selected>No Preference</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+</select>
+<select name="fireplacequality">
+<option value="NA" selected>No Preference</option>
+<option value="NO">No Fireplace</option>
+<option value="Ex">Excellent - Exceptional Masonry Fireplace</option>
+<option value="Gd">Good - Masonry Fireplace</option>
+<option value="TA">Average - Prefabricated Fireplace</option>
+<option value="Fa">Fair - Basement</option>
+<option value="Po">Poor - Ben Franklin Stove</option>
+</select>
+</div>
+</div>
+</div>
+
+
+<div class ="optgroup" id="exteriorcontainer">
+<h2>Exterior Preferences<input type="checkbox" value="exterior"></h2>
+<div class ="suboptgroup" id="exterior">
+<h3>Exterior</h3>
+<select name="exterior1" >
+<option value="NA" selected>No Preference</option>
+<option value="AsbShng">Asbestos Shingles</option>
+<option value="AsphShn">Asphalt Shingles</option>
+<option value="BrkComm">Brick Common</option>
+<option value="BrkFace">Brick Face</option>
+<option value="CBlock">Cinder Block</option>
+<option value="CemntBd">Cement Board</option>
+<option value="HdBoard">Hard Board</option>
+<option value="ImStucc">Imitation Stucco</option>
+<option value="MetalSd">Metal Siding</option>
+<option value="Other">Other</option>
+<option value="Plywood">Plywood</option>
+<option value="PreCast">PreCast</option>
+<option value="Stone">Stone</option>
+<option value="Stucco">Stucco</option>
+<option value="VinylSd">Vinyl Siding</option>
+<option value="WdSdng">Wood Siding</option>
+<option value="WdShing">Wood Shingles</option>
+</select>
+<select name="exterior2" display = "inline">
+<option value="NA" selected>No Preference</option>
+<option value="AsbShng">Asbestos Shingles</option>
+<option value="AsphShn">Asphalt Shingles</option>
+<option value="BrkComm">Brick Common</option>
+<option value="BrkFace">Brick Face</option>
+<option value="CBlock">Cinder Block</option>
+<option value="CemntBd">Cement Board</option>
+<option value="HdBoard">Hard Board</option>
+<option value="ImStucc">Imitation Stucco</option>
+<option value="MetalSd">Metal Siding</option>
+<option value="Other">Other</option>
+<option value="Plywood">Plywood</option>
+<option value="PreCast">PreCast</option>
+<option value="Stone">Stone</option>
+<option value="Stucco">Stucco</option>
+<option value="VinylSd">Vinyl Siding</option>
+<option value="WdSdng">Wood Siding</option>
+<option value="WdShing">Wood Shingles</option>
+</select>
+<h3>Exterior Condition</h3>
+<select name="exteriorcondition">
+<option value="NA" selected>No Preference</option>
+<option value="Ex">Excellent</option>
+<option value="Gd">Good</option>
+<option value="TA">Average/Typical</option>
+<option value="Fa">Fair</option>
+<option value="Po">Poor</option>
+</select>
+<h3>Masonry Veneer<input type="checkbox" value="masonryveneer"></h3>
+<select name="masonryveneer" id="masonryveneer" class = "opt">
+<option value="NA" selected>No Preference</option>
+<option value="None">None</option>
+<option value="BrkCmn">Brick Common</option>
+<option value="BrkFace">Brick Face</option>
+<option value="CBlock">Cinder Block</option>
+<option value="Stone">Stone</option>
+</select>
+</div>
+<hr>
+<h2>Exterior Features <input type="checkbox" value="exteriorfeature"></h2>
+<div class ="suboptgroup" id="exteriorfeature" class = "opt">
+<h3>Driveway <input type="checkbox" value="driveway"></h3>
+<select name="driveway" id = "driveway" class = "opt">
+<option value="NA" selected>No Preference</option>
+<option value="Y">Paved</option>
+<option value="P">Partial Pavement</option>
+<option value="N">Dirt/Gravel</option>
+</select>
+<h3>Deck <input type="checkbox" value="deck"></h3>
+<select name="deck" id = "deck" class = "opt">
+<option value="NA" selected>No Preference</option>
+<option value="S">Small</option>
+<option value="M">Medium</option>
+<option value="L">Large</option>
+</select>
+<h3>Porch <input type="checkbox" value="porch"></h3>
+<select name="porch1" class = "porch" >
+<option value="NA" selected>No Preference</option>
+<option value="O">Open</option>
+<option value="E">Enclosed</option>
+<option value="TS">Three Season</option>
+<option value="S">Screened</option>
+</select>
+<select name="porch2" class = "porch" display = "inline">
+<option value="NA" selected>No Preference</option>
+<option value="O">Open</option>
+<option value="E">Enclosed</option>
+<option value="TS">Three Season</option>
+<option value="S">Screened</option>
+</select>
+<h3>Pool <input type="checkbox" value="pool"></h3>
+<select name="pool" id = "pool" class = "opt">
+<option value="NA" selected>No Preference</option>
+<option value="NO">No Pool</option>
+<option value="Ex">Excellent</option>
+<option value="Gd">Good</option>
+<option value="TA">Average/Typical</option>
+<option value="Fa">Fair</option>
+</select>
+<h3>Fence <input type="checkbox" value="fence"></h3>
+<select name="fence" id = "fence" class = "opt">
+<option value="NA" selected>No Preference</option>
+<option value="NO">No Fence</option>
+<option value="GdPrv">Good Privacy</option>
+<option value="MnPrv">Minimum Privacy</option>
+<option value="GdWo">Good Wood</option>
+<option value="MnWw">Minimum Wood/Wire</option>
+</select>
+<h3>Garage<input type="checkbox" value="garage"></h3>
+<div id="garage" class ="supoptgroup">
+<h3>Type</h3>
+<select name="garagetype">
+<option value="NA" selected>No Preference</option>
+<option value="NO">No Garage</option>
+<option value="2Types">2 Types</option>
+<option value="Attchd">Attached to home</option>
+<option value="Basment">Basement Garage</option>
+<option value="BuiltIn">Built-In</option>
+<option value="CarPort">Car Port</option>
+<option value="Detchd">Detached from home</option>
+</select>
+<h3>Finish</h3>
+<select name="garagefinish">
+<option value="NA" selected>No Preference</option>
+<option value="Fin">Finished</option>
+<option value="RFn">Rough Finished</option>
+<option value="Unf">Unfinished</option>
+</select>
+<h3>Capacity</h3>
+<select name="garagecapacity">
+<option value="NA" selected>No Preference</option>
+<option value="1">1 Car</option>
+<option value="2">2 Car</option>
+<option value="3">3 Car</option>
+</select>
+</div>
+</div>
+</div>
+
+
+<div class ="optgroup" id="basecontainer">
+<h2> Basement Preference <input type="checkbox" value="base"></h2>
+<div class ="suboptgroup" id="base">
+<h3>Foundation <input type="checkbox" value="foundation"></h3>
+<select name="foundation" >
+<option value="NA" selected>No Preference</option>
+<option value="BrkTil">Brick & Tile</option>
+<option value="CBlock">Cinder Block</option>
+<option value="PConc">Poured Contrete</option>
+<option value="Slab">Slab</option>
+<option value="Stone">Stone</option>
+<option value="Wood">Wood</option>
+</select>
+<h3>Basement <input type="checkbox" value="basement"></h3>
+<div id = "basement" class = "suboptgroup">
+<select name="basementheight">
+<option value="NA" selected>No Preference</option>
+<option value="Ex">Excellent (100+ inches)</option>
+<option value="Gd">Good (90-99 inches)</option>
+<option value="TA">Typical (80-89 inches)</option>
+<option value="Fa">Fair (70-79 inches)</option>
+<option value="Po">Poor (<70 inches)</option>
+<option value="NA">No Basement</option>
+</select>
+<h3>Condition</h3>
+<select name="basementcondition">
+<option value="NA" selected>No Preference</option>
+<option value="Ex">Excellent</option>
+<option value="Gd">Good</option>
+<option value="TA">Typical - slight dampness allowed</option>
+<option value="Fa">Fair - dampness or some cracking or settling</option>
+<option value="Po">Poor - Severe cracking, settling, or wetness</option>
+<option value="NA">No Basement</option>
+</select>
+<h3>Finish</h3>
+<select name="basementfinish">
+<option value="NA" selected>No Preference</option>
+<option value="GLQ">Good Living Quarters</option>
+<option value="ALQ">Average Living Quarters</option>
+<option value="BLQ">Below Average Living Quarters</option>
+<option value="Rec">Average Rec Room</option>
+<option value="LwQ">Low Quality</option>
+<option value="Unf">Unfinshed</option>
+<option value="NA">No Basement</option>
+</select>
+</div>
+</div>
+</div>
+
+<div class ="optgroup" id="roofcontainer">
+<h2>Roof Information <input type="checkbox" value="roof"></h2>
+<div class ="suboptgroup" id="roof">
+<h3>Style</h3>
+<select name="roofstyle">
+<option value="NA" selected>No Preference</option>
+<option value="Flat">Flat</option>
+<option value="Gable">Gable</option>
+<option value="Gambrel">Gabrel (Barn)</option>
+<option value="Hip">Hip</option>
+<option value="Mansard">Mansard</option>
+<option value="Shed">Shed</option>
+</select>
+<h3>Material</h3>
+<select name="roofmaterial">
+<option value="NA" selected>No Preference</option>
+<option value="ClyTile">Clay or Tile</option>
+<option value="CompShg">Standard (Composite) Shingle</option>
+<option value="Membran">Membrane</option>
+<option value="Metal">Metal</option>
+<option value="Roll">Roll</option>
+<option value="Tar&Grv">Gravel & Tar</option>
+<option value="WdShake">Wood Shakes</option>
+<option value="WdShngl">Wood Shingles</option>
+</select>
+</div>
+</div>
+
+<div class ="optgroup" id="zonecontainer">
+<h2>Zone Information <input type="checkbox" value= "zone"></h2>
+<div class ="suboptgroup" id="zone">
+<h3>City Zone</h3>
+<select name="MSzoning">
+<option value="020" selected>1-STORY 1946 & NEWER ALL STYLES</option>
+<option value="030">1-STORY 1945 & OLDER</option>
+<option value="040">1-STORY W/FINISHED ATTIC ALL AGES</option>
+<option value="045">1-1/2 STORY - UNFINISHED ALL AGES</option>
+<option value="050">1-1/2 STORY FINISHED ALL AGES</option>
+<option value="060">2-STORY 1946 & NEWER</option>
+<option value="070">2-STORY 1945 & OLDER</option>
+<option value="075">2-1/2 STORY ALL AGES</option>
+<option value="080">SPLIT OR MULTI-LEVEL</option>
+<option value="085">SPLIT FOYER</option>
+<option value="090">DUPLEX</option>
+<option value="120">1-STORY PUD - 1946 & NEWER</option>
+<option value="150">1-1/2 STORY PUD - ALL AGES</option>
+<option value="160">2-STORY PUD - 1946 & NEWER</option>
+<option value="180">PUD - MULTILEVEL - INCL SPLIT LEV/FOYER</option>
+<option value="190">2 FAMILY CONVERSION - ALL STYLES AND AGES</option>
+</select>
+<h3>General Zoning</h3>
+<select name="MSzoning">
+<option value="NA" selected>No Preference</option>
+<option value="A">Agriculture</option>
+<option value="C">Commercial</option>
+<option value="FV">Floating Village Residential</option>
+<option value="I">Industrial</option>
+<option value="RH">Residential High Density</option>
+<option value="RL">Residential Low Density</option>
+<option value="RP">Residential Low Density Park</option>
+<option value="RM">Residential Medium Density</option>
+</select>
+</div>
+</div>
+
+<div class ="optgroup" id="lotcontainer">
+<h2>Lot Preference <input type="checkbox" name="lot" value="lot"> </h2>
+<div class = "suboptgroup" id="lot">
+<h3>Shape</h3>
+<select name="lotshape">
+<option value="NA" selected>No Preference</option>
+<option value="Reg">Regular</option>
+<option value="IR1">Slightly Irregular</option>
+<option value="IR2">Moderately Irregular </option>
+<option value="IR3">Irregular</option>
+</select>
+<h3>Frontage (Access to Road)</h3>
+<select name="lotconfig">
+<option value="NA" selected>No Preference</option>
+<option value="Inside">Inside Lot</option>
+<option value="Corner">Corner Lot</option>
+<option value="CulDSac">Cul-de-sac</option>
+<option value="FR2">Frontage on 2 Sides</option>
+<option value="FR2">Frontage on 3 Sides</option>
+</select>
+<h3>Slope</h3>
+<select name="landslope">
+<option value="NA" selected>No Preference</option>
+<option value="Gtl">Gentle slope</option>
+<option value="Mod">Moderate slope</option>
+<option value="Sev">Severe slope</option>
+</select>
+<h3>Contour</h3>
+<select name="landcontour">
+<option value="NA" selected>No Preference</option>
+<option value="Lvl">Flat</option>
+<option value="Bnk">Banked from Road</option>
+<option value="HLS">Hillside</option>
+<option value="Low">Depression</option>
+</select>
+</div>
+</div>
+<div class ="optgroup" id="neighborhoodcontainer">
+<h2>Neighborhood Preference <input type="checkbox" value="neighborhood"></h2>
+<div class ="suboptgroup" id="neighborhood">
+<select name="neighborhood" >
+<option value="NA" selected>No Preference</option>
+<option value="Blmngtn">Bloomington Heights</option>
+<option value="Blueste">Bluestem</option>
+<option value="BrDale">Briardale</option>
+<option value="BrkSide">Brookside</option>
+<option value="ClearCr">Clear Creek</option>
+<option value="CollgCr">College Creek</option>
+<option value="Crawfor">Crawford</option>
+<option value="Edwards">Edwards</option>
+<option value="Gilbert">Gilbert</option>
+<option value="Greens">Greens</option>
+<option value="GrnHill">Green Hills</option>
+<option value="IDOTRR">Iowa DOT and Rail Road</option>
+<option value="Landmrk">Landmark</option>
+<option value="MeadowV">Meadow Village</option>
+<option value="Mitchel">Mitchell</option>
+<option value="Names">North Ames</option>
+<option value="NoRidge">Northridge</option>
+<option value="NPkVill">Northpark Villa</option>
+<option value="NridgHt">Northridge Heights</option>
+<option value="NWAmes">Northwest Ames</option>
+<option value="OldTown">Old Town</option>
+<option value="SWISU">South & West of Iowa State University</option>
+<option value="Sawyer">Sawyer</option>
+<option value="SawyerW">Sawyer West</option>
+<option value="Somerst">Somerset</option>
+<option value="StoneBr">Stone Brook</option>
+<option value="Timber">Timberland</option>
+<option value="Veenker">Veenker</option>
+</select>
+<h3>Access Road Type <input type="checkbox" value="street"></h3>
+<select name="street" id = "street" class = "opt">
+<option value="Grvl" selected>Gravel</option>
+<option value="Pave">Paved</option>
+</select>
+<h3>Alley <input type="checkbox" value="alley"></h3>
+<select name="alley" id = "alley" class = "opt">
+<option value="NA" selected>No Alley</option>
+<option value="Grvl">Gravel</option>
+<option value="Pave">Paved</option>
+</select>
+<h3>Utilities <input type="checkbox" value="utilities"></h3>
+<select name="utilities" id = "utilities" class = "opt">
+<option value="AllPub" selected>All (Sewer)</option>
+<option value="NoSewr">All (Septic Tank)</option>
+<option value="NoSeWa">Electric & Gas Only </option>
+<option value="ELO">Electric Only</option>
+</select>
+<h3>Extra Conditions <input type="checkbox" value="condition"><h3>
+<div class = "suboptgroup" id = "condition">
+<select name="condition1" id = "condition1" class = "opt">
+<option value="NA" selected>No Preference</option>
+<option value="Artery">Adjacent to arterial street</option>
+<option value="Feedr">Adjacent to feeder street	</option>
+<option value="Norm">Normal</option>
+<option value="RRNn">Within 200' of North-South Railroad</option>
+<option value="RRAn">Adjacent to North-South Railroad</option>
+<option value="PosN">Near positive off-site feature--park, greenbelt, etc.</option>
+<option value="PosA">Adjacent to postive off-site feature</option>
+<option value="RRNe">Within 200' of East-West Railroad</option>
+<option value="RRAe">Adjacent to East-West Railroad</option>
+</select>
+<select name="condition2" display = "inline" id = "condition2" class = "opt">
+<option value="NA" selected>No Preference</option>
+<option value="Artery">Adjacent to arterial street</option>
+<option value="Feedr">Adjacent to feeder street	</option>
+<option value="Norm">Normal</option>
+<option value="RRNn">Within 200' of North-South Railroad</option>
+<option value="RRAn">Adjacent to North-South Railroad</option>
+<option value="PosN">Near positive off-site feature--park, greenbelt, etc.</option>
+<option value="PosA">Adjacent to postive off-site feature</option>
+<option value="RRNe">Within 200' of East-West Railroad</option>
+<option value="RRAe">Adjacent to East-West Railroad</option>
+</select>
+</div>
+</div>
+</div>
+
+<div class ="optgroup" id="miscfeature">
+<h2>Misc. Feature</h2>
+<select name="miscfeature">
+<option value="NA" selected>No Preference</option>
+<option value="NA">None</option>
+<option value="Elev">Elevator</option>
+<option value="Gar2">2nd Garage</option>
+<option value="Othr">Other</option>
+<option value="Shed">Shed</option>
+<option value="TenC">Tennis Court</option>
+</select>
+<select name="miscfeature2">
+<option value="NA" selected>No Preference</option>
+<option value="NA">None</option>
+<option value="Elev">Elevator</option>
+<option value="Gar2">2nd Garage</option>
+<option value="Othr">Other</option>
+<option value="Shed">Shed</option>
+<option value="TenC">Tennis Court</option>
+</select>
+</div>
+
+</form>
+</body>
+</html>
