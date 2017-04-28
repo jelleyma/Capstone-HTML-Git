@@ -1,0 +1,119 @@
+[
+  {
+    "_Run_": 1,
+    "Dependent": "SalePrice",
+    "Parameter": "Intercept",
+    "Estimate": -2085632.46934,
+    "StdErr": 72742.6675607,
+    "tValue": -28.6713773261,
+    "Probt": 2.68680378095e-159
+  },
+  {
+    "_Run_": 1,
+    "Dependent": "SalePrice",
+    "Parameter": "Lot_Area",
+    "Estimate": 0.468289973505,
+    "StdErr": 0.0849690467343,
+    "tValue": 5.51130077956,
+    "Probt": 3.87609844325e-08
+  },
+  {
+    "_Run_": 1,
+    "Dependent": "SalePrice",
+    "Parameter": "Total_Bsmt_SF",
+    "Estimate": 41.0686505822,
+    "StdErr": 1.88559558764,
+    "tValue": 21.7802008296,
+    "Probt": 1.6813537002e-97
+  },
+  {
+    "_Run_": 1,
+    "Dependent": "SalePrice",
+    "Parameter": "Gr_Liv_Area",
+    "Estimate": 63.7551290951,
+    "StdErr": 2.01339630338,
+    "tValue": 31.6654644633,
+    "Probt": 3.84739861256e-189
+  },
+  {
+    "_Run_": 1,
+    "Dependent": "SalePrice",
+    "Parameter": "Mas_Vnr_Area",
+    "Estimate": 51.7694129987,
+    "StdErr": 4.04014607221,
+    "tValue": 12.8137478382,
+    "Probt": 1.3399610744e-36
+  },
+  {
+    "_Run_": 1,
+    "Dependent": "SalePrice",
+    "Parameter": "Bsmt_Full_Bath",
+    "Estimate": 10077.0794939,
+    "StdErr": 1294.74381999,
+    "tValue": 7.78306823201,
+    "Probt": 9.78529750056e-15
+  },
+  {
+    "_Run_": 1,
+    "Dependent": "SalePrice",
+    "Parameter": "Full_Bath",
+    "Estimate": -5992.94175752,
+    "StdErr": 1663.27466304,
+    "tValue": -3.60309808758,
+    "Probt": 0.000319757426805
+  },
+  {
+    "_Run_": 1,
+    "Dependent": "SalePrice",
+    "Parameter": "Fireplaces",
+    "Estimate": 9985.32201953,
+    "StdErr": 1126.83806192,
+    "tValue": 8.86136380813,
+    "Probt": 1.35361660334e-18
+  },
+  {
+    "_Run_": 1,
+    "Dependent": "SalePrice",
+    "Parameter": "Garage_Area",
+    "Estimate": 49.1041702079,
+    "StdErr": 3.78158908024,
+    "tValue": 12.9850624079,
+    "Probt": 1.63793726377e-37
+  },
+  {
+    "_Run_": 1,
+    "Dependent": "SalePrice",
+    "Parameter": "Wood_Deck_SF",
+    "Estimate": 19.6838353995,
+    "StdErr": 5.27451950387,
+    "tValue": 3.73187271087,
+    "Probt": 0.0001937267323
+  },
+  {
+    "_Run_": 1,
+    "Dependent": "SalePrice",
+    "Parameter": "Screen_Porch",
+    "Estimate": 55.3461460294,
+    "StdErr": 11.2653093442,
+    "tValue": 4.91297170265,
+    "Probt": 9.47108636951e-07
+  },
+  {
+    "_Run_": 1,
+    "Dependent": "SalePrice",
+    "Parameter": "Year_Built",
+    "Estimate": 410.900361518,
+    "StdErr": 30.2875486838,
+    "tValue": 13.566643039,
+    "Probt": 1.08759908997e-40
+  },
+  {
+    "_Run_": 1,
+    "Dependent": "SalePrice",
+    "Parameter": "Year_Remod_Add",
+    "Estimate": 645.573581614,
+    "StdErr": 39.0228491323,
+    "tValue": 16.543476347,
+    "Probt": 8.36896037636e-59
+  }
+]
